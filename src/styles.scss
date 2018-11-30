@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { margin: 0; height: 100%; overflow: hidden }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; 	text-shadow: 0 0 1px #000,0 0 2px #000,0 0 3px #000,0 0 4px #000,0 0 5px #000,0 0 6px #000,0 0 7px #000;
+  color: white;
+}
+.generator {
+  background: url("resources/page-bg.png"); overflow: scroll;
+}
