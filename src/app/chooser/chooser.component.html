@@ -1,3 +1,8 @@
-<p>
-  chooser works!
-</p>
+
+  <div style="background-color: #371b1b; text-align: center">
+    <h1>Select background</h1>
+      <a *ngFor="let bg of backgrounds">
+        <cite (click)="onSelect(bg.fileName)"><img [src]="imageService.bgPath + bg.fileName"></cite>
+      </a>
+  </div>
+

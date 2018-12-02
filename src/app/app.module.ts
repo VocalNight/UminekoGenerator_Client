@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChooserComponent } from './chooser/chooser.component';
+import {ImageService} from './image.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,12 @@ import { ChooserComponent } from './chooser/chooser.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

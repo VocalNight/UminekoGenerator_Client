@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ImageService} from '../image.service';
 
 @Component({
   selector: 'app-chooser',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chooser.component.css']
 })
 export class ChooserComponent implements OnInit {
+  backgrounds: Array<any>;
+  @Output() selectedBackground = new EventEmitter<String>();
 
-  constructor() { }
+  constructor(private imageService: ImageService) { }
 
   ngOnInit() {
+    this.imageService.getBackgrounds().subscribe(bgs =>
+    this.backgrounds = bgs);
   }
 
+  onSelect(name: String) {
+    this.selectedBackground.emit(name);
+  }
 }

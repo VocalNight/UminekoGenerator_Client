@@ -5,5 +5,5 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; 	text-shadow: 0 0 1px 
   color: white;
 }
 .generator {
-  background: url("resources/page-bg.png"); overflow: scroll;
+  background: url("resources/page-bg.png"); height: 100%; overflow: scroll;
 }
