@@ -3,7 +3,7 @@
     <cite id='bg' class='bgempty'>
     <img *ngIf="buttonBg" [src]="buttonBg"></cite>Background</button>
   <p></p>
-  <button mat-raised-button color="primary"><cite class='chempty'></cite>Left</button>
+  <button (click)="showCharLeft()" mat-raised-button color="primary"><cite class='chempty'></cite>Left</button>
   <p></p>
   <button mat-raised-button color="primary"><cite class='chempty'></cite>Center</button>
   <p></p>
@@ -24,4 +24,8 @@
 
 <div *ngIf="showBg" style=" left: 15em; padding: 1em; position: absolute;">
   <app-chooser (selectedBackground)="onBackgroundSelected($event)"></app-chooser>
+</div>
+
+<div *ngIf="charLeft" style=" left: 15em; padding: 1em; position: absolute;">
+  <app-character-chooser></app-character-chooser>
 </div>

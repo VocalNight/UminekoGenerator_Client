@@ -6,11 +6,24 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ImageService {
-  bgPath: string = 'http://127.0.0.1:8887/bgresize/';
+  bgPath = 'http://127.0.0.1:8887/bgresize/';
+  charPath = 'http://127.0.0.1:8887/sprites/charchooser2/';
+  spritePath = 'http://127.0.0.1:8887/sprites/';
 
   constructor(private http: HttpClient) { }
 
   getBackgrounds(): Observable<any> {
     return this.http.get('//localhost:8080/backgrounds');
   }
+
+  getChars(): Observable<any> {
+    return this.http.get('//localhost:8080/sprites/charchooser');
+  }
+
+  getSprites(char: string): Observable<any> {
+    return this.http.get(this.spritePath + char);
+  }
+
+
+
 }

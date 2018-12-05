@@ -8,12 +8,16 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ChooserComponent } from './chooser/chooser.component';
 import {ImageService} from './image.service';
 import {HttpClientModule} from '@angular/common/http';
+import { CharacterChooserComponent } from './character-chooser/character-chooser.component';
+import { SpriteChooserComponent } from './character-chooser/sprite-chooser/sprite-chooser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    ChooserComponent
+    ChooserComponent,
+    CharacterChooserComponent,
+    SpriteChooserComponent
   ],
   imports: [
     BrowserModule,

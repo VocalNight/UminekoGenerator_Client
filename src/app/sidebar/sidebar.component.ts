@@ -10,7 +10,8 @@ import {ImageService} from '../image.service';
 export class SidebarComponent implements OnInit {
   image: GeneratedScreenshot = new GeneratedScreenshot();
   buttonBg: string;
-  showBg: boolean = false;
+  showBg = false;
+  charLeft = false;
   constructor(private imageService: ImageService) {}
 
   ngOnInit() {
@@ -25,4 +26,10 @@ export class SidebarComponent implements OnInit {
   showBackgrounds() {
     this.showBg = !this.showBg;
   }
+
+  showCharLeft() {
+    this.charLeft = !this.charLeft;
+    this.showBg = false;
+  }
+
 }
