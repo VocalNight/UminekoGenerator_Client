@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export class ImageService {
   bgPath = 'http://127.0.0.1:8887/bgresize/';
   charPath = 'http://127.0.0.1:8887/sprites/charchooser2/';
-  spritePath = 'http://127.0.0.1:8887/sprites/';
+  spritePath: string;
 
   constructor(private http: HttpClient) { }
 
@@ -21,7 +21,8 @@ export class ImageService {
   }
 
   getSprites(char: string): Observable<any> {
-    return this.http.get(this.spritePath + char);
+    this.spritePath = 'http://127.0.0.1:8887/sprites/' + char + '/';
+    return this.http.get('//localhost:8080/sprites?name=' + char);
   }
 
 

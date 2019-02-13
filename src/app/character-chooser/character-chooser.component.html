@@ -1,8 +1,9 @@
 <div style="background-color: #371b1b; text-align: center">
   <h1>Select character</h1>
   <a *ngFor="let char of chars">
-    <cite (click)="onSelect(char.fileName)"><img [src]="imageService.charPath + char.fileName"> </cite>
+    <cite  (click)="onSelect(char.name)"><img [src]="imageService.charPath + char.fileName"> </cite>
   </a>
+  <hr>
   <div *ngIf="charSelected">
     <app-sprite-chooser [character]="charSelected"></app-sprite-chooser>
   </div>

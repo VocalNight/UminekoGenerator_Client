@@ -25,6 +25,7 @@ export class SidebarComponent implements OnInit {
 
   showBackgrounds() {
     this.showBg = !this.showBg;
+    this.charLeft = false;
   }
 
   showCharLeft() {

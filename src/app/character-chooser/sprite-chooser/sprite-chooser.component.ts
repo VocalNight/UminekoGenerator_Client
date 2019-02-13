@@ -11,11 +11,12 @@ export class SpriteChooserComponent implements OnInit {
   sprites: Array<any>;
 
   constructor(public imageService: ImageService) {
-    this.imageService.getSprites(this.character).subscribe(charSprites =>
-    this.sprites = charSprites);
+
   }
 
   ngOnInit() {
+    this.imageService.getSprites(this.character).subscribe(charSprites =>
+     this.sprites = charSprites);
   }
 
 }

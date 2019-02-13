@@ -10,7 +10,7 @@ export class ChooserComponent implements OnInit {
   backgrounds: Array<any>;
   @Output() selectedBackground = new EventEmitter<String>();
 
-  constructor(private imageService: ImageService) { }
+  constructor(public imageService: ImageService) { }
 
   ngOnInit() {
     this.imageService.getBackgrounds().subscribe(bgs =>

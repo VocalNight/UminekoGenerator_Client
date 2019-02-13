@@ -1,3 +1,5 @@
 <div style="background-color: #371b1b; text-align: center">
-
+  <a *ngFor="let sprite of sprites">
+    <cite (click)="onSelect(char.fileName)"><img [src]="imageService.spritePath + sprite.fileName"> </cite>
+  </a>
 </div>

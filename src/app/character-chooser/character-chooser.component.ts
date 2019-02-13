@@ -10,6 +10,7 @@ export class CharacterChooserComponent implements OnInit {
   chars: Array<any>;
   showSprites = false;
   charSelected: string;
+  @Ouput
 
 
   constructor(public imageService: ImageService) { }
@@ -19,8 +20,8 @@ export class CharacterChooserComponent implements OnInit {
     this.chars = characters);
   }
 
-  onSelect(name: String) {
-   // this.selectedBackground.emit(name);
+  onSelect(name: string) {
+     this.charSelected = name;
     this.showSprites = !this.showSprites;
   }
 
