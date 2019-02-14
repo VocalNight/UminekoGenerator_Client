@@ -10,7 +10,6 @@ export class CharacterChooserComponent implements OnInit {
   chars: Array<any>;
   showSprites = false;
   charSelected: string;
-  @Ouput
 
 
   constructor(public imageService: ImageService) { }
