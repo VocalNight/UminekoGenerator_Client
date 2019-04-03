@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GeneratedScreenshot} from './GeneratedScreenshot';
-import {ImageService} from '../image.service';
+import {ImageService} from '../services/image.service';
 
 @Component({
   selector: 'app-sidebar',

@@ -1,12 +1,12 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {ImageService} from '../image.service';
+import {ImageService} from '../services/image.service';
 
 @Component({
   selector: 'app-chooser',
-  templateUrl: './chooser.component.html',
-  styleUrls: ['./chooser.component.css']
+  templateUrl: './background.chooser.component.html',
+  styleUrls: ['./background.chooser.component.css']
 })
-export class ChooserComponent implements OnInit {
+export class BackgroundChooserComponent implements OnInit {
   backgrounds: Array<any>;
   @Output() selectedBackground = new EventEmitter<String>();
 

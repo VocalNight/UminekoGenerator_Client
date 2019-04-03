@@ -3,28 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatToolbarModule, MatCardModule} from '@angular/material';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ChooserComponent } from './chooser/chooser.component';
-import {ImageService} from './image.service';
+import { BackgroundChooserComponent } from './background-chooser/background.chooser.component';
+import {ImageService} from './services/image.service';
 import {HttpClientModule} from '@angular/common/http';
 import { CharacterChooserComponent } from './character-chooser/character-chooser.component';
 import { SpriteChooserComponent } from './character-chooser/sprite-chooser/sprite-chooser.component';
+import { TextEditorComponent } from './text-editor/text-editor.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    ChooserComponent,
+    BackgroundChooserComponent,
     CharacterChooserComponent,
-    SpriteChooserComponent
+    SpriteChooserComponent,
+    TextEditorComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

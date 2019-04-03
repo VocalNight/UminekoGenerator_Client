@@ -1,14 +1,16 @@
 #background { text-shadow: 0 0 1px #000,0 0 2px #000,0 0 3px #000,0 0 4px #000,0 0 5px #000,0 0 6px #000,0 0 7px #000;
   color: white;
-  margin-left: 8px; margin-top: 3px; width: 200px; height: 60px; text-align: right; font-size: 17px;
+  margin-left: 8px; margin-top: 3px; width: 210px; height: 60px; text-align: right; font-size: 17px;
+  background-color: #371b1b;
 }
 
 button {text-shadow: 0 0 1px #000,0 0 2px #000,0 0 3px #000,0 0 4px #000,0 0 5px #000,0 0 6px #000,0 0 7px #000;
   color: white;
   margin-top: -10px; margin-left: 8px; width: 210px; height: 55px; font-size: 17px; text-align: left;
+  background-color: #371b1b;
 }
 
-.bgempty {width: 64px; height: 48px; display: inline-block;}
+.bgempty {width: 74px; height: 48px; display: inline-block;}
 
 .chempty{width: 40px; height: 48px; display: inline-block;}
 
